@@ -388,15 +388,6 @@ module "kube_prometheus_stack" {
   addon_context     = local.addon_context
 }
 
-module "portworx" {
-  source = "./portworx"
-
-  count = var.enable_portworx ? 1 : 0
-
-  helm_config   = var.portworx_helm_config
-  addon_context = local.addon_context
-}
-
 module "prometheus" {
   count       = var.enable_prometheus ? 1 : 0
   source      = "./prometheus"
