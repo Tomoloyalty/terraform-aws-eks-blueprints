@@ -12,7 +12,7 @@ module "helm_addon" {
       name             = local.name
       chart            = local.name
       repository       = "https://aws.github.io/secrets-store-csi-driver-provider-aws"
-      version          = "0.3.2"
+      version          = "0.3.5"
       namespace        = local.namespace
       create_namespace = local.namespace == "kube-system" ? false : true
       description      = "A Helm chart for the AWS Secrets Manager and Config Provider for Secret Store CSI Driver."
